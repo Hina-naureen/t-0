@@ -12,6 +12,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "baseUrl": "./",
     "incremental": true,
     "plugins": [
       {
@@ -19,9 +20,11 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/": ["./src/"],
+      "@/sanity/": ["./src/sanity/"],
+      "@/sanity/lib/": ["./src/sanity/lib/"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "*/.ts", "*/.tsx", ".next/types/*/.ts"],
   "exclude": ["node_modules"]
 }
